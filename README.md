@@ -7,8 +7,8 @@ disponibilidade das mesas.
 
 # Divisão de Funcionalidades
 
-**Clientes:** Gabriel
-**Mesa:** João
-**Reserva:** Nicolas
-**Pedido:** Guilherme
-**Item Cardápio:** Junji
+* **Clientes**: Gabriel
+* **Mesa**: João
+* **Reserva**: Nicolas
+* **Pedido**: Guilherme
+* **Item Cardápio**: Junji
