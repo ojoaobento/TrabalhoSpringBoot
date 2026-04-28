@@ -1,11 +1,8 @@
 package com.example.demo.dto;
 
-
-
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 
 @Data
 @NoArgsConstructor
@@ -15,7 +12,6 @@ public class ClienteDTO {
 
     @NotBlank(message = "O nome é obrigatório")
     private String nome;
-
 
     @Email(message = "E-mail inválido")
     @NotBlank(message = "O e-mail é obrigatório")
