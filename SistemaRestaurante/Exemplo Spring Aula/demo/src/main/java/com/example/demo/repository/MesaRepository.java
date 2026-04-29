@@ -11,8 +11,5 @@ import java.util.List;
 
 @Repository
 public interface MesaRepository extends JpaRepository<Mesa, Long> {
-    Optional<Mesa> findByNumero(Integer numero);
-
     List<Mesa> findByStatusIgnoreCase(String status);
-
 }
