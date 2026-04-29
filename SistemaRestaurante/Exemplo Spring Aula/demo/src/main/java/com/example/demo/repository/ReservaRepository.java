@@ -4,12 +4,13 @@ package com.example.demo.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.Entities.Mesa;
+import com.example.demo.Entities.Reserva;
 
-import java.util.Optional;
 import java.util.List;
 
 @Repository
-public interface MesaRepository extends JpaRepository<Mesa, Long> {
-    List<Mesa> findByStatusIgnoreCase(String status);
+public interface ReservaRepository extends JpaRepository<Reserva, Long> {
+
+    List<Reserva> findByStatusIgnoreCase(String status);
+
 }

@@ -24,7 +24,7 @@ public class MesaDTO {
 
     @NotBlank(message = "O status da mesa é obrigatório")
     @Pattern(
-        regexp = "LIVRE|OCUPADA|RESERVADA",
+        regexp = "(?i)^(LIVRE|OCUPADA|RESERVADA)$",
         message = "Status deve ser LIVRE, OCUPADA ou RESERVADA"      
     )
     private String status;

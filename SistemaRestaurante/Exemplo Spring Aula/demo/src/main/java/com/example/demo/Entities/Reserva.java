@@ -1,14 +1,13 @@
 package com.example.demo.Entities;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,27 +17,28 @@ import lombok.Setter;
 
 @Data
 @Entity
-@Table(name = "pedidos")
+@Table(name = "reservas")
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
-public class Pedido {
+
+public class Reserva {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
-
-    @ManyToOne
-    @JoinColumn (name = "Reserva_Id" , nullable = false)
-    private Reserva reserva;
-
-    @ManyToOne
-    @JoinColumn (name = "Item_Id" , nullable = false)
-    private ItemDeCardapio ItemDeCardapio;
+    private Long id;
 
     @Column(nullable = false)
-    private Integer Quantidade;
+    private Long clienteId;
 
     @Column(nullable = false)
-    private double ValorTotal;
+    private Long mesaId;
+
+    @Column(nullable = false)
+    private LocalDateTime dataReserva;
+
+    @Column(nullable = false)
+    private LocalTime horaReserva;
+
+    @Column(nullable = false)
+    private String status;
 }
-
