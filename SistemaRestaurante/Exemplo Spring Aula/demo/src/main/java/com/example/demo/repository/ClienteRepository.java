@@ -9,6 +9,6 @@ import com.example.demo.Entities.Usuario;
 import java.util.Optional;
 
 @Repository
-public interface IUsuarioRepository extends JpaRepository<Usuario, Long> {
+public interface ClienteRepository extends JpaRepository<Usuario, Long> {
     
 }
